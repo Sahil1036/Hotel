@@ -49,10 +49,12 @@ router.put("/:_id", async (req, res) => {
     const updateData=req.body;
     const response=await Person.findByIdAndUpdate(id,updateData,{
       new:true,
-      runValidators:true
+      runValidators:true,
     });
     if(!response)
     res.status(404).json({ error: "Not update data" });
+    console.log("data updated sucessfully");
+    res.status(200).json(response);
   }catch (err) {
     console.log("error fetching person", err);
     res.status(500).json({ error: "internal server error" });
@@ -65,6 +67,8 @@ router.delete("/:_id", async (req, res) => {
     const response=await Person.findByIdAndRemove(id);
     if(!response)
     res.status(404).json({ error: "Not found" });
+    console.log("person deleted sucessfully");
+    res.status(200).json({message:"person delted sucessfully"});
   }catch (err) {
     console.log("error fetching person", err);
     res.status(500).json({ error: "internal server error" });
