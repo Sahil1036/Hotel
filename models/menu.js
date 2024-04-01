@@ -16,8 +16,7 @@ const menuSchema = new mongoose.Schema({
     default: false,
   },
   ingredients: {
-    type: "string",
-    enum: ["chicken wings", "spices", "sauce"],
+    type: ["string"]
   },
   num_sales: {
     type: Number,
