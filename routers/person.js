@@ -52,7 +52,7 @@ router.put("/:_id", async (req, res) => {
       runValidators:true,
     });
     if(!response)
-    res.status(404).json({ error: "Not update data" });
+    res.status(404).json({ error: "Not update data"});
     console.log("data updated sucessfully");
     res.status(200).json(response);
   }catch (err) {
@@ -64,11 +64,13 @@ router.put("/:_id", async (req, res) => {
 router.delete("/:_id", async (req, res) => {
   try {
     const id=req.params._id;
-    const response=await Person.findByIdAndRemove(id);
+    const response=await Person.findByIdAndDelete(id);
     if(!response)
     res.status(404).json({ error: "Not found" });
-    console.log("person deleted sucessfully");
-    res.status(200).json({message:"person delted sucessfully"});
+    else{
+      res.status(200).json({message:"person delted sucessfully"});
+      console.log("person deleted sucessfully");
+    }
   }catch (err) {
     console.log("error fetching person", err);
     res.status(500).json({ error: "internal server error" });
