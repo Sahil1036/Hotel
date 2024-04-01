@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-require("dotenv").config();
+require("dotenv").config(); 
 const mongourl = process.env.mongourlLocal;
 
 mongoose.connect(mongourl);
