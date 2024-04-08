@@ -1,3 +1,3 @@
 # ignore to push file
 node_modules/
-.env.local
+.env

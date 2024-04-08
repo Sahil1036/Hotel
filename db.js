@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 require("dotenv").config(); 
-const mongourl = process.env.mongourlLocal;
+const mongourl = process.env.mongodbUrlLocal;
 
 mongoose.connect(mongourl);
 const db = mongoose.connection;
 
-db.on("connected", () => {
+db.on("connected", () => {  
   console.log("mongodb conected sucessfuly");
 });
 db.on("error", () => {
