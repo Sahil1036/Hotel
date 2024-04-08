@@ -88,10 +88,15 @@ npm start
   - Retrieves all menu items which has taste.
 
 
+## Link to Project
+
+[Restaurant Management System](https://hotel-zpds.onrender.com)
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
---- 
 
-This README provides a basic overview of this project, including installation instructions, usage details, API endpoints. Make sure to replace `<port_number>` and `<database_connection_string>` with your actual port number and database URI. Additionally, customize the endpoints and functionality based on your specific project requirements.
+## This README provides a basic overview of this project, including installation instructions, usage details, API endpoints. Make sure to replace `<port_number>` and `<database_connection_string>` with your actual port number and database URI. Additionally, customize the endpoints and functionality based on your specific project requirements.
+
+---
